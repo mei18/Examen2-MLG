@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    
+  div.container
+    h1
+      h1=titulo
+      a(class="prev",href="/elecciones") Elecciones
+      a(class="next",href="/ganador") Ganador
+    
+  div.votos
+  - for(var i = 0; i < elecciones.length; ++i) {
+      div.box
+        h3 #{elecciones[i].nombre}
+        h5 Colegio Electoral = #{elecciones[i].puntos}
+        h5 Votos por Hillary = #{elecciones[i].hillary}
+        h5 Votos por Trump = #{elecciones[i].trump}
+        h5 Ganador por Estado = #{elecciones[i].ganador}
+  - }

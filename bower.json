@@ -1,0 +1,9 @@
+{
+  "name": "examen2-mlg",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

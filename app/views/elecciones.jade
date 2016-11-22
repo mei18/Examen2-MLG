@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  div.container
+    h1
+      h1=titulo
+      a(class="next", href="/votos") Votos
+      
+  div.estados
+  - for(var i = 0; i < elecciones.length; ++i){
+      div.box
+        h3 #{elecciones[i].nombre}
+        form(action="/elecciones/#{elecciones[i]._id}", method="POST")
+          label Trump
+          input(type="number", name="trump" id=elecciones[i]._id, value="trump")
+          br
+          label Hillary
+          input(type="number", name="hillary" id=elecciones[i]._id, value="hillary")
+          button(class="btn", name="id", id=elecciones[i]._id) Enviar
+      
+  -}
