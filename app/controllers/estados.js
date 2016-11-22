@@ -73,7 +73,7 @@ router.post('/elecciones/:id', function(req, res) {
     docs.hillary = jadeHillary;
 
     console.log("Datos del estado seleccionado" + JSON.stringify(docs));
-    //verifica cual tuvo más botos por estado
+    //verifica cual tuvo más votos por estado
     if (docs.trump <= 0 && docs.hillary <= 0) {
       console.log(err);
     }else {
